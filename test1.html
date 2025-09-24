@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RPG test </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #000000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Icône retour (à placer aussi dans les pages persos) */
+    .icone-retour {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 30px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      z-index: 1000;
+    }
+
+    .icone-retour:hover {
+      transform: scale(1.2);
+    }
+
+    .container {
+      display: flex;
+      padding: 50px;
+    }
+
+    .persos {
+      flex: 3;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .perso {
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .perso img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+    }
+
+    .perso h3 {
+      margin: 10px 0 5px;
+    }
+
+    .perso p {
+      margin: 5px 0;
+    }
+
+    .perso button {
+      padding: 8px 15px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="test1.html" class="icone-retour">🛡️</a>
+
+  <header>
+    <h1>CHOISI TON COMBATTANT 🗡️</h1>
+  </header>
+
+  <div class="container">
+    <div class="persos">
+     
+      <div class="perso">
+        <img src="walid.jpg" alt="personnage 1" />
+        <h3>WALID</h3>
+        <p>difficulté :⭐</p>
+        <button onclick="goToPage()">affiché</button>
+      </div>
+
+      <div class="perso">
+        <img src="raouf.jpg" alt="personnage2" />
+        <h3>RAOUF</h3>
+        <p>difficulté:⭐⭐</p>
+        <button onclick="goToPage1()">affiché</button>
+      </div>
+
+      <div class="perso">
+        <img src="spiro.jpg" alt="personnage 3" />
+        <h3>SPIRO</h3>
+        <p>difficulté:⭐⭐⭐</p>
+        <button onclick="goToPage2()">affiché</button>
+      </div> 
+
+      <div class="perso">
+        <img src="mumus.jpg" alt="personnage 4" />
+        <h3>MUMUS</h3>
+        <p>difficulté:⭐⭐⭐⭐</p>
+        <button onclick="goToPage3()">affiché</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function goToPage() {
+      window.location.href = "persos/walid.html"; 
+    }
+    function goToPage1() {
+      window.location.href = "persos/raouf.html"; 
+    }
+    function goToPage2() {
+      window.location.href = "persos/spiro.html"; 
+    }
+    function goToPage3() {
+      window.location.href = "persos/mumus.html"; 
+    }
+  </script>
+</body>
+</html>
+
